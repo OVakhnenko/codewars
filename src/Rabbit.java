@@ -2,15 +2,17 @@ public class Rabbit {
 
     static class RabbitPrinter implements Runnable {
         public void run() {
-            System.out.println("New rabbit born!");
-            new Thread(new RabbitPrinter()).start();
-            System.out.println("New rabbit born!");
-            new Thread(new RabbitPrinter()).start();
+            for (int i = 0; i < 2; i++) {
+                Runnable rp = new RabbitPrinter();
+                Thread thread = new Thread(rp);
+                System.out.println("New rabbit born! " + thread.getName());
+                thread.start();
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                try {
+                    thread.sleep(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
