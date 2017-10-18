@@ -1,12 +1,16 @@
 public class Rabbit {
 
-    class RabbitPrinter implements Runnable {
+    static class RabbitPrinter implements Runnable {
         public void run() {
             System.out.println("New rabbit born!");
-        ...
-            while (...){
-                new Thread().start(new RabbitPrinter());
-            ....
+            new Thread(new RabbitPrinter()).start();
+            System.out.println("New rabbit born!");
+            new Thread(new RabbitPrinter()).start();
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }
