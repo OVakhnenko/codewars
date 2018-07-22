@@ -1,3 +1,5 @@
+package v1;
+
 public class ThreadRabbitAttack {
     public static void main(String[] args) throws InterruptedException {
         for (int k = 1; k < 10000000; k++) {

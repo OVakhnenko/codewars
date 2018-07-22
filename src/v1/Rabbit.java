@@ -1,4 +1,10 @@
+package v1;
+
 public class Rabbit {
+
+    public static void main(String[] args) {
+        new Thread(new RabbitPrinter()).start();
+    }
 
     static class RabbitPrinter implements Runnable {
         public void run() {
@@ -15,9 +21,5 @@ public class Rabbit {
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        new Thread(new RabbitPrinter()).start();
     }
 }

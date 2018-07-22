@@ -1,7 +1,9 @@
+package v1;
+
 public class Producer implements Runnable {
-    private int startValue;
     private final int period;
     private final SingleElementBuffer buffer;
+    private int startValue;
 
     public Producer(int startValue, int period, SingleElementBuffer buffer) {
         this.buffer = buffer;

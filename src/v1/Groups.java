@@ -1,3 +1,5 @@
+package v1;
+
 public class Groups {
 
     public static boolean groupCheck(String s) {

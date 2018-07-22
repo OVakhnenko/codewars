@@ -1,3 +1,5 @@
+package v1;
+
 public class Consumer implements Runnable {
     private final SingleElementBuffer buffer;
 

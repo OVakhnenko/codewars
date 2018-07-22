@@ -1,3 +1,5 @@
+package v1;
+
 public class SingleElementBuffer {
     private Integer elem = null;
 

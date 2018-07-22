@@ -1,3 +1,5 @@
+package v1;
+
 class Persist {
     public static int persistence(long n) {
         long multiply;
